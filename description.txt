@@ -1,0 +1,13 @@
+app.py (Flask REST Publisher Server):
+Implements a lightweight publish-subscribe backend using Flask. It exposes four core REST endpoints:
+
+POST /add-subscriber: Registers subscribers with a name and URI.
+
+GET /list-subscribers: Returns a JSON array of all active subscriber names.
+
+POST /update-subject: Broadcasts a subject update payload to all active subscribers.
+
+DELETE /delete-subscriber: Removes a subscriber by name.
+
+test_app.py (Automated Test Suite):
+Uses Python's built-in unittest framework and Flask's test client to verify endpoint functionality, checking status codes (e.g., 201, 200, 400, 404) and state changes independently without manual intervention.
